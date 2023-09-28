@@ -1,0 +1,8 @@
+string attribute = "Cd";
+float blend = chf("blend");
+
+float first_input_val = point(0, attribute, @ptnum);
+float second_input_val = point(1, attribute, @ptnum);
+
+float val = lerp(first_input_val, second_input_val, blend);
+setpointattrib(0, attribute, @ptnum, val, "set");
