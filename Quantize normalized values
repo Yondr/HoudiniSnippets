@@ -1,0 +1,11 @@
+string attribute = "Cd";
+int steps = chi("steps");
+
+function float Quantize01(float value, steps;) {
+    return rint(value * steps)/steps;  
+};
+
+float val = point(0, attribute, @ptnum);
+val = Quantize01(val, steps);
+
+setpointattrib(0, attribute, @ptnum, val, "set");
